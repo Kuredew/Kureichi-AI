@@ -61,8 +61,8 @@ app.get('/chat', async (req, res) => {
               stream: true,  // Aktifkan streaming
               setTimeout: 1,
           });
-        } catch{
-          var kalimat = '<p>Mohon maaf, Kureichi lagi banyak menerima pertanyaan, harap untuk menunggu dia beristirahat sebentar<br><br>Salam, Abi, Developer of Kureichi</p>'
+        } catch(err){
+          var kalimat = `<p>Mohon maaf, Kureichi lagi banyak menerima pertanyaan, harap untuk menunggu dia beristirahat sebentar<br><br>Salam, Abi, Developer of Kureichi<br><br>Kesalahan:<br>${err.message}</p>`
           var kumpulan_kata = kalimat.split(" ")
 
           var tulis = ""
