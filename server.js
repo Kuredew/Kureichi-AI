@@ -15,7 +15,7 @@ async function sleep(ms) {
 // Konfigurasi OpenAI API
 const client = new OpenAI({
     baseURL: 'https://openrouter.ai/api/v1',
-    apiKey: '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'
+    apiKey: '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'
 });
 
 // Membuat aplikasi Express
