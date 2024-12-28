@@ -118,10 +118,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/reset', (req, res) => {
-  id_user = req.query.id
-  session[id_user] = []
+  id_user = req.query.id;
+  delete session[id_user];
   res.send('Berhasil di Reset')
-  process.stdout.write('Berhasil')
+  process.stdout.write(`Sesi ${id_user} berhasil dihapus`)
 })
 
 app.get('/chst', (req, res) => {
