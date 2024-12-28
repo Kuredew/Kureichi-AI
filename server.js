@@ -2,6 +2,7 @@ const express = require('express');
 const OpenAI = require('openai');
 const cors = require('cors');
 const showdown = require('showdown')
+require('dotenv').config();
 
 // Menggunakan dotenv untuk memuat variabel lingkungan
 
@@ -15,7 +16,7 @@ async function sleep(ms) {
 // Konfigurasi OpenAI API
 const client = new OpenAI({
     baseURL: 'https://openrouter.ai/api/v1',
-    apiKey: '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'
+    apiKey: process.env.OPENROUTER_API_KEY
 });
 
 // Membuat aplikasi Express
